@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const FooterLists = (props) => {
     return (
-        <div>
+        <div className={`${props.className}`}>
             <h6 className=" capitalize text-2xl mb-2 ">{props.title}</h6>{" "}
             <ul>
                 {props.child.map((child, index) => {

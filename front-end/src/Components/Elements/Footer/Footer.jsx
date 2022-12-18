@@ -1,5 +1,5 @@
 import React from "react";
-import SignupForUpdate from "../../Ui/SignupForUpdate/SignupForUpdate";
+import NewsLatterAndSocial from "../../Ui/NewsLatterAndSocial/NewsLatterAndSocial";
 import FooterLists from "./FooterLists";
 
 const Footer = () => {
@@ -91,19 +91,35 @@ const Footer = () => {
 
     return (
         <footer>
-            <div className=" py-20 container px-3">
+            <div className=" py-20 px-3">
                 {/* footer list  */}
-                <div className=" grid grid-cols-1 gap-y-5 sm:grid-cols-3 ">
+                <div
+                    className=" grid grid-cols-1 gap-y-5 sm:grid-cols-2 
+                lg:grid-cols-9 lg:container xl:grid-cols-[200px_250px_200px_1fr] 2xl:grid-cols-[220px_280px_220px_1fr]   "
+                >
                     {FooterData.map((list, index) => {
-                        return <FooterLists key={index} {...list} />;
+                        return (
+                            <FooterLists
+                                className=" lg:col-span-2 xl:col-span-1 "
+                                key={index}
+                                {...list}
+                            />
+                        );
                     })}
+                    <NewsLatterAndSocial
+                        className=" mt-4 lg:mt-0 lg:col-span-3
+                     lg:max-w-[350px] lg:w-full xl:col-span-1 xl:justify-self-end   "
+                    />
                 </div>
             </div>
+            {/* footer texts  */}
             <div
                 className=" text-center py-3 border-t-[1px] border-stone-500 
              border-opacity-50 "
             >
-                <p className=" text-c-ash opacity-60 ">Developed By Mohd Rejoan</p>
+                <p className=" text-c-ash opacity-60 ">
+                    Developed By Mohd Rejoan
+                </p>
             </div>
         </footer>
     );
