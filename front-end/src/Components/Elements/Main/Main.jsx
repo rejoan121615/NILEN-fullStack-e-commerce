@@ -1,5 +1,7 @@
 import React from "react";
 import Haan from "../../../Assets/Images/main_Haan_senitaizers.webp";
+import SectionTitle from "../../Ui/TitleText/SectionTitle";
+import RedBtn from "../../Ui/Buttons/RedBtn";
 
 const Main = () => {
     return (
@@ -18,12 +20,15 @@ const Main = () => {
                 </div>
                 {/* left texts  */}
                 <div className=" sm:row-[1/2] sm:col-[1/2] center   ">
-                    <div className="">
-                        <h1 className="flex flex-col display-1 ">
-                            <span className="">Haan</span>
-                            <span className="">Sanitaizers</span>
-                        </h1>
-                        <p>Turning care around</p>
+                    <div className=" w-full h-full center xl:grid xl:grid-cols-5 ">
+                        <div className=" xl:col-start-2 xl:col-span-5 ">
+                            <SectionTitle>Haan</SectionTitle>
+                            <SectionTitle>Sanitaizers</SectionTitle>
+                            <h6 className=" font-medium mt-2 text-base lg:text-lg xl:text-xl 2xl:text-2xl  ">Turning care around</h6>
+                            <div>
+                                <RedBtn text="go to catalog" />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 {/* shop feature  */}
