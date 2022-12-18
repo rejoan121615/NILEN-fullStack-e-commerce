@@ -34,9 +34,10 @@ const Main = () => {
                 {/* shop feature  */}
                 <div
                     className=" bg-black w-full h-full opacity-30
-               sm:row-[2/-1] sm:col-[1/2] "
+               sm:row-[2/-1] sm:col-[1/2]"
                 >
-                    <div>
+                    <div className="border-l-2"></div>
+                    <div className="border-l-2">
                         <p>3-5 working days delivery</p>
                     </div>
                     <div>
@@ -45,6 +46,7 @@ const Main = () => {
                     <div>
                         <p>Within all Europe</p>
                     </div>
+                    <div></div>
                 </div>
             </div>
         </section>
