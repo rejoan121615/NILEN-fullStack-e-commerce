@@ -1,0 +1,4 @@
+.brand {
+  @apply w-full flex items-center justify-center h-full
+    text-3xl  ;
+}
