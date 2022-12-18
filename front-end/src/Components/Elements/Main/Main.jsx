@@ -44,6 +44,26 @@ const ShopFeatures = () => {
 };
 
 const Main = () => {
+
+    const Maindiv = [
+        {
+            title: ["3-5 working", "days delivery"],
+            display: "flex",
+            displaydirection: "flex-col"
+        },
+        {
+            title: ["3-5 working", "days delivery"],
+            display: "flex",
+            displaydirection: "flex-col"
+
+        },
+        {
+            title: ["3-5 working", "days delivery"],
+            display: "flex",
+            displaydirection: "flex-col"
+        }
+    ]
+
     return (
         <section className="border-b-2">
             <div
