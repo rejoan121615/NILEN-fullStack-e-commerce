@@ -2,6 +2,26 @@ import React from "react";
 import Haan from "../../../Assets/Images/main_Haan_senitaizers.webp";
 
 const Main = () => {
+
+    const Maindiv = [
+        {
+            title: ["3-5 working", "days delivery"],
+            display: "flex",
+            displaydirection: "flex-col"
+        },
+        {
+            title: ["3-5 working", "days delivery"],
+            display: "flex",
+            displaydirection: "flex-col"
+
+        },
+        {
+            title: ["3-5 working", "days delivery"],
+            display: "flex",
+            displaydirection: "flex-col"
+        }
+    ]
+
     return (
         <section className="border-b-2">
             <div
@@ -28,20 +48,18 @@ const Main = () => {
                 </div>
                 {/* shop feature  */}
                 <div
-                    className=" bg-black w-full h-full opacity-30
-               sm:row-[2/-1] sm:col-[1/2]"
+                    className="bg-white w-full h-full
+               sm:row-[2/-1] sm:col-[1/2] flex flex-row justify-center border-t-2"
                 >
-                    <div className="border-l-2"></div>
-                    <div className="border-l-2">
-                        <p>3-5 working days delivery</p>
-                    </div>
-                    <div>
-                        <p>Free shipping over 35C</p>
-                    </div>
-                    <div>
-                        <p>Within all Europe</p>
-                    </div>
-                    <div></div>
+                    {Maindiv.map((titletext, index) => (
+                        <div key={index} className="border-r-2 first:border-l-2">
+                            <span></span>
+                            <p className={titletext.display + " flex-col"}>
+                                <span>{titletext.title[0]}</span>
+                                <span>{titletext.title[1]}</span>
+                            </p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
