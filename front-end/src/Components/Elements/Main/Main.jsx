@@ -2,6 +2,9 @@ import React from "react";
 import Haan from "../../../Assets/Images/main_Haan_senitaizers.webp";
 import SectionTitle from "../../Ui/TitleText/SectionTitle";
 import RedBtn from "../../Ui/Buttons/PurpleBtn";
+import { HiOutlineCalendar } from "react-icons/hi";
+import { MdOutlineLocalShipping } from "react-icons/md";
+import { CgBox } from "react-icons/cg";
 
 const RightSideImg = () => {
     return (
@@ -35,47 +38,67 @@ const LeftTexts = () => {
 };
 
 const ShopFeatures = () => {
+    const Maindiv = [
+        {
+            Icon: HiOutlineCalendar,
+            text: ["3-5 working", "days delivery"],
+            iconSize: " text-xl xl:text-3xl ",
+            className: ' col-start-2 lg:col-start-1'
+        },
+        {
+            Icon: MdOutlineLocalShipping,
+            text: ["Free shipping", "inside dhaka"],
+            iconSize: " text-xl xl:text-3xl ",
+            className: ' '
+        },
+        {
+            Icon: CgBox,
+            text: ["All over", "Bangladesh"],
+            iconSize: " text-xl xl:text-3xl ",
+            className: ' '
+        },
+    ];
     return (
         <div
-            className=" bg-black [grid-area:feat] lg:col-span-5 "
+            className=" border-t [grid-area:feat] lg:col-span-5 grid 
+        grid-cols-[1fr_repeat(3,2fr)_1fr] md:grid-cols-[1fr_repeat(3,1fr)_1fr]
+         lg:grid-cols-3 "
         >
-
+            {Maindiv.map((item, index) => {
+                return (
+                    <div
+                        key={index}
+                        className={` border-r last:border-r-0 px-4 py-3
+                     lg:flex lg:flex-col lg:justify-center
+                     ${item.className} `}
+                    >
+                        {/* icon  */}
+                        <div className=" w-10 h-10 rounded-full border center xl:w-16 xl:h-16 ">
+                            <item.Icon className={item.iconSize} />
+                        </div>
+                        <div>
+                            <p className=" mt-3 text-sm xl:text-base">
+                                {item.text[0]}
+                            </p>
+                            <p className=" text-sm xl:text-base">
+                                {item.text[1]}
+                            </p>
+                        </div>
+                    </div>
+                );
+            })}
         </div>
     );
 };
 
 const Main = () => {
-
-    const Maindiv = [
-        {
-            title: ["3-5 working", "days delivery"],
-            display: "flex",
-            displaydirection: "flex-col"
-        },
-        {
-            title: ["3-5 working", "days delivery"],
-            display: "flex",
-            displaydirection: "flex-col"
-
-        },
-        {
-            title: ["3-5 working", "days delivery"],
-            display: "flex",
-            displaydirection: "flex-col"
-        }
-    ]
-
     return (
         <section className="border-b-2">
             <div
-                className=" grid [grid-template:_'img'_1fr_'text'_400px_'feat'_100px/1fr] 
-                sm:[grid-template:_'text_img'_1fr_'feat_feat'_100px/1fr_1fr]
-                 lg:grid-cols-12 lg:grid-rows-[1fr_150px] "
+                className=" grid [grid-template:_'img'_1fr_'text'_400px_'feat'_auto/1fr] 
+                sm:[grid-template:_'text_img'_1fr_'feat_feat'_auto/1fr_1fr]
+                 lg:grid-cols-12 lg:grid-rows-[1fr_auto] "
             >
-                {/* <div
-                className="contianer grid grid-cols-1 grid-rows-[1fr_minmax(300px,400px)_100px]
-                 sm:grid-cols-2 sm:grid-rows-[1fr_100px] lg:grid-cols-[5fr_7fr]  "
-            > */}
                 {/* right square image  */}
                 <RightSideImg />
                 {/* left texts  */}
