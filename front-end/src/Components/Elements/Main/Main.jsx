@@ -5,7 +5,7 @@ import RedBtn from "../../Ui/Buttons/PurpleBtn";
 
 const RightSideImg = () => {
     return (
-        <div className=" sm:col-[2/-1] sm:row-[1/-1] lg:border-l  ">
+        <div className="[grid-are:img] lg:col-span-7 lg:row-span-2">
             <img
                 className=" inline-block aspect-square w-full "
                 src={Haan}
@@ -17,7 +17,7 @@ const RightSideImg = () => {
 
 const LeftTexts = () => {
     return (
-        <div className=" sm:row-[1/2] sm:col-[1/2] center   ">
+        <div className="[grid-area:text] lg:col-span-5">
             <div className=" w-full h-full center xl:grid xl:grid-cols-5 ">
                 <div className=" xl:col-start-2 xl:col-end-5 xl:col-span-4 ">
                     <SectionTitle>Haan</SectionTitle>
@@ -37,9 +37,10 @@ const LeftTexts = () => {
 const ShopFeatures = () => {
     return (
         <div
-            className=" bg-black w-full h-full opacity-30
-               sm:row-[2/-1] sm:col-[1/2]"
-        ></div>
+            className=" bg-black [grid-area:feat] lg:col-span-5 "
+        >
+
+        </div>
     );
 };
 
@@ -67,9 +68,14 @@ const Main = () => {
     return (
         <section className="border-b-2">
             <div
+                className=" grid [grid-template:_'img'_1fr_'text'_400px_'feat'_100px/1fr] 
+                sm:[grid-template:_'text_img'_1fr_'feat_feat'_100px/1fr_1fr]
+                 lg:grid-cols-12 lg:grid-rows-[1fr_150px] "
+            >
+                {/* <div
                 className="contianer grid grid-cols-1 grid-rows-[1fr_minmax(300px,400px)_100px]
                  sm:grid-cols-2 sm:grid-rows-[1fr_100px] lg:grid-cols-[5fr_7fr]  "
-            >
+            > */}
                 {/* right square image  */}
                 <RightSideImg />
                 {/* left texts  */}
