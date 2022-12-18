@@ -22,7 +22,9 @@
 
 @layer components {
     .display-1 {
-        @apply text-6xl uppercase;
+        @apply font-bold text-[35px] leading-[34px]
+
+        lg:text-6xl uppercase;
     }
     .center {
         @apply flex items-center justify-center;
