@@ -70,12 +70,12 @@ const NewsLatterAndSocial = (props) => {
                 {socialLinks.map((social, index) => {
                     return (
                         <a
+                            key={index}
                             href={social.link}
                             className=" inline-block mr-2 md:mr-4"
                         >
                             <div
-                                key={index}
-                          className=" w-10 h-10 center border-[2px] rounded-full
+                                className=" w-10 h-10 center border-[2px] rounded-full
                                  lg:w-14 lg:h-14 "
                             >
                                 <social.Element
