@@ -56,7 +56,7 @@ const BestSellers = (props) => {
     ];
 
     return (
-        <div className="">
+        <div className=" max-boundry">
             <div className=" xl:grid xl:grid-cols-cus-12 2xl:grid-cols-12 ">
                 <div className=" border-x-[1px] xl:col-span-10 xl:col-start-2  ">
                     <Swiper
