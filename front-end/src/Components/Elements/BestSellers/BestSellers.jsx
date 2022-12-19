@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import withSectionWrap from "../../HOC/withSectionWrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import "swiper/css/bundle";
-// import { } from 'swiper/react/'
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import ProductImg from "../../../Assets/Images/products-img/product.jpg";
 import Product from "../Product/Product";
 
-const BestSellers = () => {
+const BestSellers = (props) => {
     const productData = [
         {
             title: "Gentle Paloma + Regill PA ",
@@ -52,19 +54,37 @@ const BestSellers = () => {
             type: "Hand Soap",
         },
     ];
+
     return (
         <div className="">
             <div className=" xl:grid xl:grid-cols-cus-12 2xl:grid-cols-12 ">
                 <div className=" border-x-[1px] xl:col-span-10 xl:col-start-2  ">
                     <Swiper
+                        modules={[Navigation]}
+                        onInit={(swiper) => {
+                            swiper.params.navigation.prevEl =
+                                props?.prevBtn?.current;
+                            swiper.params.navigation.nextEl =
+                                props?.nextBtn?.current;
+                            swiper.navigation.init();
+                            swiper.navigation.update();
+                        }}
                         spaceBetween={0}
                         slidesPerView={3}
-                        breakpoints={{ 320: { slidesPerView: 1 }, 640: { slidesPerView: 2}, 1024: {slidesPerView: 3} }}
+                        breakpoints={{
+                            320: { slidesPerView: 1 },
+                            640: { slidesPerView: 2 },
+                            1024: { slidesPerView: 3 },
+                        }}
+                        loop={true}
                     >
                         {productData.map((item, index) => {
                             return (
-                                <SwiperSlide className=" ">
-                                    <Product className=" border-x-[1px] " key={index} {...item} />
+                                <SwiperSlide key={index} className=" ">
+                                    <Product
+                                        className=" border-x-[1px] "
+                                        {...item}
+                                    />
                                 </SwiperSlide>
                             );
                         })}
