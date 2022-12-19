@@ -53,18 +53,18 @@ const BestSellers = () => {
         },
     ];
     return (
-        <div className=" border-y">
-            <div className=" xl:grid xl:grid-cols-12 ">
-                <div className=" border-x xl:col-span-10 xl:col-start-2  ">
+        <div className="">
+            <div className=" xl:grid xl:grid-cols-cus-12 2xl:grid-cols-12 ">
+                <div className=" border-x-[1px] xl:col-span-10 xl:col-start-2  ">
                     <Swiper
                         spaceBetween={0}
                         slidesPerView={3}
-                        breakpoints={{ 320: { slidesPerView: 1 } }}
+                        breakpoints={{ 320: { slidesPerView: 1 }, 640: { slidesPerView: 2}, 1024: {slidesPerView: 3} }}
                     >
                         {productData.map((item, index) => {
                             return (
                                 <SwiperSlide className=" ">
-                                    <Product key={index} {...item} />
+                                    <Product className=" border-x-[1px] " key={index} {...item} />
                                 </SwiperSlide>
                             );
                         })}

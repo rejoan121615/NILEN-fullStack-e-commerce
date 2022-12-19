@@ -10,9 +10,9 @@ const withSectionWrap = (WrappedComponent, props) => {
         render() {
             return (
                 <section className=" mt-20 lg:mt-32 ">
-                    <div className=" max-w-max-boundry mx-auto ">
+                    <div className=" max-w-max-boundry mx-auto">
                         {/* title  */}
-                        <div className=" mx-auto sm:px-0 ">
+                        <div className=" px-3 mx-auto mb-6 sm:mb-8 ">
                             <div className=" w-full flex items-center justify-between xl:grid lg:grid-cols-12 ">
                                 <SectionTitle className=" lg:col-start-2 lg:col-span-7 ">
                                     {props.title}
@@ -31,7 +31,9 @@ const withSectionWrap = (WrappedComponent, props) => {
                             </div>
                         </div>
                         {/* slider  */}
-                        <WrappedComponent {...props} />
+                        <div className=" px-3 border-y xl:px-0 ">
+                            <WrappedComponent {...props} />
+                        </div>
                     </div>
                 </section>
             );

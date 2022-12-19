@@ -25,6 +25,9 @@ module.exports = {
             maxWidth: {
                 "max-boundry": "2000px",
             },
+            gridTemplateColumns: {
+                "cus-12": "0.5fr repeat(10, 1fr) 0.5fr",
+            },
         },
     },
 };
