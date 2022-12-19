@@ -43,7 +43,7 @@ const ShopFeatures = () => {
             Icon: HiOutlineCalendar,
             text: ["3-5 working", "days delivery"],
             iconSize: " text-xl xl:text-3xl ",
-            className: ' col-start-2 lg:col-start-1'
+            className: ' col-start-2 lg:col-start-1 2xl:col-start-2'
         },
         {
             Icon: MdOutlineLocalShipping,
@@ -62,18 +62,17 @@ const ShopFeatures = () => {
         <div
             className=" border-t [grid-area:feat] lg:col-span-5 grid 
         grid-cols-[1fr_repeat(3,2fr)_1fr] md:grid-cols-[1fr_repeat(3,1fr)_1fr]
-         lg:grid-cols-3 "
+         lg:grid-cols-3 2xl:grid-cols-[1fr_repeat(3,160px)_1fr] "
         >
             {Maindiv.map((item, index) => {
                 return (
                     <div
                         key={index}
                         className={` border-r last:border-r-0 px-4 py-3
-                     lg:flex lg:flex-col lg:justify-center
+                     lg:flex lg:flex-col lg:justify-center 2xl:last:border-r 2xl:first:border-l 2xl:px-5 2xl:py-5
                      ${item.className} `}
                     >
-                        {/* icon  */}
-                        <div className=" w-10 h-10 rounded-full border center xl:w-16 xl:h-16 ">
+                        <div className=" w-10 h-10 rounded-full border center xl:w-14 xl:h-14 ">
                             <item.Icon className={item.iconSize} />
                         </div>
                         <div>

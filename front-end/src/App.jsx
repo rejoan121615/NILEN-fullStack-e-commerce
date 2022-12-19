@@ -1,15 +1,15 @@
 import { useState } from "react";
+import { Outlet } from 'react-router-dom'
 import Header from "./Components/Elements/Header/Header";
-import Main from "./Components/Elements/Main/Main";
 import Footer from "./Components/Elements/Footer/Footer";
+// routes 
+import Home from "./Pages/Home";
 
 function App() {
-    const [name, setName] = useState();
-
     return (
         <div className="App prose ">
             <Header />
-            <Main/>
+            <Outlet />
             <Footer />
         </div>
     );
