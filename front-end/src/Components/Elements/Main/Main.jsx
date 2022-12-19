@@ -8,7 +8,7 @@ import { CgBox } from "react-icons/cg";
 
 const RightSideImg = () => {
     return (
-        <div className="[grid-are:img] lg:col-span-7 lg:row-span-2">
+        <div className="[grid-are:img] lg:col-span-7 lg:row-span-2 xl:border-l mxl:border-x">
             <img
                 className=" inline-block aspect-square w-full "
                 src={Haan}
@@ -43,19 +43,19 @@ const ShopFeatures = () => {
             Icon: HiOutlineCalendar,
             text: ["3-5 working", "days delivery"],
             iconSize: " text-xl xl:text-3xl ",
-            className: ' col-start-2 lg:col-start-1 2xl:col-start-2'
+            className: " col-start-2 lg:col-start-1 2xl:col-start-2",
         },
         {
             Icon: MdOutlineLocalShipping,
             text: ["Free shipping", "inside dhaka"],
             iconSize: " text-xl xl:text-3xl ",
-            className: ' '
+            className: " ",
         },
         {
             Icon: CgBox,
             text: ["All over", "Bangladesh"],
             iconSize: " text-xl xl:text-3xl ",
-            className: ' '
+            className: " ",
         },
     ];
     return (
@@ -93,17 +93,19 @@ const ShopFeatures = () => {
 const Main = () => {
     return (
         <section className="border-b-2">
-            <div
-                className=" grid [grid-template:_'img'_1fr_'text'_400px_'feat'_auto/1fr] 
+            <div className=" max-w-max-boundry mx-auto ">
+                <div
+                    className=" grid [grid-template:_'img'_1fr_'text'_400px_'feat'_auto/1fr] 
                 sm:[grid-template:_'text_img'_1fr_'feat_feat'_auto/1fr_1fr]
-                 lg:grid-cols-12 lg:grid-rows-[1fr_auto] "
-            >
-                {/* right square image  */}
-                <RightSideImg />
-                {/* left texts  */}
-                <LeftTexts />
-                {/* shop feature  */}
-                <ShopFeatures />
+                 lg:grid-cols-12 lg:grid-rows-[1fr_auto] mxl:border-l "
+                >
+                    {/* right square image  */}
+                    <RightSideImg />
+                    {/* left texts  */}
+                    <LeftTexts />
+                    {/* shop feature  */}
+                    <ShopFeatures />
+                </div>
             </div>
         </section>
     );
