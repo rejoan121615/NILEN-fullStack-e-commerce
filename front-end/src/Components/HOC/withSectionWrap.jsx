@@ -43,13 +43,29 @@ const withSectionWrap = (WrappedComponent, props) => {
                         </div>
                     </div>
                     {/* slider  */}
-                    <div className=" px-3 border-y xl:px-0 ">
-                        <WrappedComponent
-                            {...props}
-                            nextBtn={this.nextRef}
-                            prevBtn={this.prevRef}
-                        />
-                    </div>
+                    {!props.boundry ? (
+                        <div className=" border-y ">
+                            <div className=" max-boundry ">
+                                <div className=" xl:grid xl:grid-cols-cus-12 2xl:grid-cols-12 ">
+                                    <div className=" border-x-[1px] xl:col-span-10 xl:col-start-2  ">
+                                        <WrappedComponent
+                                            {...props}
+                                            nextBtn={this.nextRef}
+                                            prevBtn={this.prevRef}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className=" px-3 border-y xl:px-0 ">
+                            <WrappedComponent
+                                {...props}
+                                nextBtn={this.nextRef}
+                                prevBtn={this.prevRef}
+                            />
+                        </div>
+                    )}
                 </section>
             );
         }

@@ -28,6 +28,10 @@ module.exports = {
             gridTemplateColumns: {
                 "cus-12": "0.5fr repeat(10, 1fr) 0.5fr",
             },
+            fontSize: {
+                "c-25": "25px",
+                "c-60": "60px",
+            },
         },
     },
 };

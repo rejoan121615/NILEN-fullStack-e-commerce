@@ -56,42 +56,31 @@ const BestSellers = (props) => {
     ];
 
     return (
-        <div className=" max-boundry">
-            <div className=" xl:grid xl:grid-cols-cus-12 2xl:grid-cols-12 ">
-                <div className=" border-x-[1px] xl:col-span-10 xl:col-start-2  ">
-                    <Swiper
-                        modules={[Navigation]}
-                        onInit={(swiper) => {
-                            swiper.params.navigation.prevEl =
-                                props?.prevBtn?.current;
-                            swiper.params.navigation.nextEl =
-                                props?.nextBtn?.current;
-                            swiper.navigation.init();
-                            swiper.navigation.update();
-                        }}
-                        spaceBetween={0}
-                        slidesPerView={3}
-                        breakpoints={{
-                            320: { slidesPerView: 1 },
-                            640: { slidesPerView: 2 },
-                            1024: { slidesPerView: 3 },
-                        }}
-                        loop={true}
-                    >
-                        {productData.map((item, index) => {
-                            return (
-                                <SwiperSlide key={index} className=" ">
-                                    <Product
-                                        className=" border-x-[1px] "
-                                        {...item}
-                                    />
-                                </SwiperSlide>
-                            );
-                        })}
-                    </Swiper>
-                </div>
-            </div>
-        </div>
+        <Swiper
+            modules={[Navigation]}
+            onInit={(swiper) => {
+                swiper.params.navigation.prevEl = props?.nextBtn?.current;
+                swiper.params.navigation.nextEl = props?.prevBtn?.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
+            }}
+            spaceBetween={0}
+            slidesPerView={3}
+            breakpoints={{
+                320: { slidesPerView: 1 },
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            }}
+            loop={true}
+        >
+            {productData.map((item, index) => {
+                return (
+                    <SwiperSlide key={index} className=" ">
+                        <Product className=" border-x-[1px] " {...item} />
+                    </SwiperSlide>
+                );
+            })}
+        </Swiper>
     );
 };
 
