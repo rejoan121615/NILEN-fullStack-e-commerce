@@ -3,6 +3,7 @@ import SectionTitle from "../Ui/TitleText/SectionTitle";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 
 const withSectionWrap = (WrappedComponent, props) => {
+    // props list => boundry, slider, title
     return class extends React.Component {
         constructor(props) {
             super(props);
