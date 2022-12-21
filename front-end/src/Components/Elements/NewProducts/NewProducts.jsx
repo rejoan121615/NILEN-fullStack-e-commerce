@@ -1,6 +1,6 @@
 import React from "react";
 import withSectionWrap from "../../HOC/withSectionWrap";
-import PurpleBtn from "../../Ui/Buttons/PurpleBtn";
+import CircleBtn from "../../Ui/Buttons/CircleBtn";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProductImg from "../../../Assets/Images/products-img/product2.jpg";
 import ProductImg2 from "../../../Assets/Images/products-img/product.jpg";
@@ -10,14 +10,18 @@ import { AiFillPropertySafety } from "react-icons/ai";
 
 const ProductsLinkCard = (props) => {
     return (
-        <div className={`${props.className} flex items-center justify-center xl:justify-start `}>
+        <div
+            className={`${props.className} flex items-center justify-center xl:justify-start `}
+        >
             <div>
-                <p className=" uppercase text-xl xs:text-2xl xs:w-[200px] sm:w-2/2 md:text-3xl 
-                md:w-[250px] lg:w-[300px] ">
+                <p
+                    className=" uppercase text-xl xs:text-2xl xs:w-[200px] sm:w-2/2 md:text-3xl 
+                md:w-[250px] lg:w-[300px] "
+                >
                     A splash of fresh moisture
                 </p>
                 <div className=" text-center mt-4 sm:mt-8 xl:text-left xl:mt-8 2xl:mt-12">
-                    <PurpleBtn text="see all" />
+                    <CircleBtn text="see all" />
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import withSectionWrap from "../../HOC/withSectionWrap";
 import AboutUsImg from "../../../Assets/Images/about-us.jpg";
-import PurpleBtn from "../../Ui/Buttons/PurpleBtn";
+import CircleBtn from "../../Ui/Buttons/CircleBtn";
 
 const Description = () => {
     return (
@@ -43,7 +43,7 @@ const Description = () => {
                 </p>
             </div>
             <div className=" mt-5 xl:w-2/6 text-center ">
-                <PurpleBtn text="Visite" />
+                <CircleBtn text="Visite" />
             </div>
         </div>
     );

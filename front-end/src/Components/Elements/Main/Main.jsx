@@ -1,7 +1,7 @@
 import React from "react";
 import Haan from "../../../Assets/Images/main_Haan_senitaizers.webp";
 import SectionTitle from "../../Ui/TitleText/SectionTitle";
-import RedBtn from "../../Ui/Buttons/PurpleBtn";
+import RedBtn from "../../Ui/Buttons/CircleBtn";
 import { HiOutlineCalendar } from "react-icons/hi";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { CgBox } from "react-icons/cg";
