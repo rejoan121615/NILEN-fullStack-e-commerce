@@ -7,12 +7,13 @@ import CircleBtn from "../../Ui/Buttons/CircleBtn";
 
 const SeeAllProducts = () => {
     return (
-        <div className=" p-4 flex flex-col items-center justify-center sm:border-r-[1px] ">
-            <p className=" font-semibold w-2/3">
+      <div className=" p-4 flex flex-col items-center justify-center 
+        sm:border-r-[1px] lg:col-span-2 lg:flex-row ">
+            <p className=" font-semibold w-2/3 lg:w-[200px] lg:mr-8 xl:mr-16 ">
                 All collections that will remind you of defferent times of the
                 day.
             </p>
-            <div className=" mt-5 ">
+            <div className=" mt-5 lg:mt-0 ">
                 <CircleBtn type="purple" text="see all products" />
             </div>
         </div>
@@ -61,7 +62,8 @@ const CatagoryComponent = () => {
     return (
         <div
             className=" w-full grid grid-cols-1 grid-rows-[repeat(7,1fr)_400px]
-         gap-y-8 sm:grid-cols-2 sm:grid-rows-[repeat(4,1fr)] sm:gap-y-0 "
+         gap-y-8 sm:grid-cols-2 sm:grid-rows-[repeat(4,1fr)] sm:gap-y-0
+          lg:grid-cols-3 lg:grid-rows-3"
         >
             {CatagoryList.map((catagory, index) => {
                 return (
