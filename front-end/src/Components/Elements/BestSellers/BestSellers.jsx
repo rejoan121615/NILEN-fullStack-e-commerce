@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import ProductImg from "../../../Assets/Images/products-img/product.jpg";
-import Product from "../Product/Product";
+import Product from "../../Block/Product/Product";
 
 const BestSellers = (props) => {
     const productData = [

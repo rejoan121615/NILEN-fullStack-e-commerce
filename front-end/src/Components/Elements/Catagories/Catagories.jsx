@@ -1,14 +1,16 @@
 import React from "react";
 import withSectionWrap from "../../HOC/withSectionWrap";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Product from "../Product/Product";
+import Product from "../../Block/Product/Product";
 import CatagoryImg from "../../../Assets/Images/products-img/product.jpg";
 import CircleBtn from "../../Ui/Buttons/CircleBtn";
 
 const SeeAllProducts = () => {
     return (
-      <div className=" p-4 flex flex-col items-center justify-center 
-        sm:border-r-[1px] lg:col-span-2 lg:flex-row ">
+        <div
+            className=" p-4 flex flex-col items-center justify-center 
+        sm:border-r-[1px] lg:col-span-2 lg:flex-row "
+        >
             <p className=" font-semibold w-2/3 lg:w-[200px] lg:mr-8 xl:mr-16 ">
                 All collections that will remind you of defferent times of the
                 day.

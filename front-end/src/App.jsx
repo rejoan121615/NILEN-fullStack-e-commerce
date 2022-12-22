@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Outlet } from 'react-router-dom'
-import Header from "./Components/Elements/Header/Header";
-import Footer from "./Components/Elements/Footer/Footer";
+import Header from "./Components/Block/Header/Header";
+import Footer from "./Components/Block/Footer/Footer";
 // routes 
 import Home from "./Pages/Home";
 

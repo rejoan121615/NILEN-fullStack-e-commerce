@@ -7,7 +7,7 @@ const CircleBtn = (props) => {
     console.log(props.type === "purple");
     // props link, type = purple / orange , text
     return (
-        <Link to={props.link} className=" inline-block ">
+        <Link to={props.link} className={`${props.className} inline-block `}>
             <div
                 className={`hover:-rotate-12 transition-all relative bg-no-repeat grid grid-cols-1 grid-rows-1 
             items-center justify-items-center  ${

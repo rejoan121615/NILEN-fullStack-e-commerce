@@ -4,7 +4,7 @@ import CircleBtn from "../../Ui/Buttons/CircleBtn";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProductImg from "../../../Assets/Images/products-img/product2.jpg";
 import ProductImg2 from "../../../Assets/Images/products-img/product.jpg";
-import Product from "../Product/Product";
+import Product from "../../Block/Product/Product";
 import "swiper/css";
 import { AiFillPropertySafety } from "react-icons/ai";
 
