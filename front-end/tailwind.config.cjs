@@ -11,6 +11,7 @@ module.exports = {
             },
             colors: {
                 "c-red": "#E16950",
+                "c-red-500": "#f18a74",
                 "c-purple": "#B59EBF",
                 "c-yellow": "#E9AF28",
                 "c-black": "#131213",
@@ -30,6 +31,7 @@ module.exports = {
             },
             fontSize: {
                 "c-25": "25px",
+                "c-40": "40px",
                 "c-60": "60px",
             },
         },

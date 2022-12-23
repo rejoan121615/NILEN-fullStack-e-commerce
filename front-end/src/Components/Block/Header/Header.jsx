@@ -9,16 +9,17 @@ const Header = () => {
     const Links = [{}];
 
     return (
-        <header className=" border-b">
-            <div className=" max-w-max-boundry mx-auto">
-                <nav className=" grid grid-cols-[100px_1fr_50px_50px] lg:grid-cols-[repeat(5,1fr)_2fr_repeat(5,1fr)] justify-between mxl:border-x ">
+        <header className=" border-b xl:h-[90px] 2xl:h-[100px] ">
+            <div className=" max-w-max-boundry mx-auto xl:h-full">
+                <nav className=" grid grid-cols-[100px_1fr_50px_50px] 
+                lg:grid-cols-[repeat(5,1fr)_2fr_repeat(5,1fr)] justify-between mxl:border-x xl:h-full ">
                     <div className=" lg:border-r">
                         <button
                             className={` p-3 lg:py-6 capitalize
                     flex items-center justify-center
                     h-full center lg:w-full `}
                         >
-                            <RxHamburgerMenu className=" text-xl sm:text-2xl md:text-3xl text-black " />
+                            <RxHamburgerMenu className=" text-xl sm:text-2xl md:text-3xl text-black xl:text-4xl " />
                         </button>
                     </div>
 
@@ -26,7 +27,7 @@ const Header = () => {
                         to="/"
                         className="w-full flex items-center justify-center h-full
                               text-xl  lg:col-start-6
-                               sm:text-2xl md:text-3xl lg:border-x xl:text-4xl "
+                               sm:text-2xl md:text-3xl lg:border-x xl:text-4xl 2xl:text-5xl "
                     >
                         NILEN
                     </Link>
@@ -39,15 +40,15 @@ const Header = () => {
                                 flex items-center justify-center
                                 lg:border-l h-full `}
                         >
-                            <BsPerson className=" text-xl sm:text-2xl text-black " />
+                            <BsPerson className=" text-xl sm:text-2xl text-black xl:text-3xl " />
                         </Link>
                         <Link
-                            to="/cart"
+                            to="/checkout"
                             className={`  py-2 lg:py-6 capitalize 
                     flex items-center justify-center
                     lg:border-l h-full `}
                         >
-                            <HiOutlineShoppingBag className=" text-xl sm:text-2xl text-black " />
+                            <HiOutlineShoppingBag className=" text-xl sm:text-2xl text-black xl:text-3xl " />
                         </Link>
                     </div>
                 </nav>
