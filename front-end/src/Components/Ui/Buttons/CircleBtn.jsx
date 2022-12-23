@@ -5,13 +5,15 @@ import PurpleBtnBg from "../../../Assets/Images/button/btn_purple_bg.png";
 
 const CircleBtn = (props) => {
     console.log(props.type === "purple");
-    // props link, type = purple / orange , text
+    // props link, type = purple / orange , text, width
     return (
-        <Link to={props.link} className={`${props.className} inline-block `}>
+        <Link to={props.link} className={`${props.className} inline-block w-full `}>
             <div
                 className={`hover:-rotate-12 transition-all relative bg-no-repeat grid grid-cols-1 grid-rows-1 
             items-center justify-items-center  ${
-                props.type === "purple"
+                props.width
+                    ? " w-full "
+                    : props.type === "purple"
                     ? " w-44 lg:w-56 xl:w-64 2xl:w-72 "
                     : "w-36 xl:w-44 2xl:w-48"
             } `}
@@ -23,7 +25,7 @@ const CircleBtn = (props) => {
                 />
                 <p
                     className={`col-[1/2] row-[1/2] text-sm text-white xl:text-base 2xl:text-xl
-                    ${props.type === 'purple' ? " lg:w-20 text-center " : ""}`}
+                    ${props.type === "purple" ? " lg:w-20 text-center " : ""}`}
                 >
                     {props.text}
                 </p>
