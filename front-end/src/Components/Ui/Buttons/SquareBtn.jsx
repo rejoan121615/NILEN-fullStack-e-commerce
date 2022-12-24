@@ -5,7 +5,7 @@ const SquareBtn = (props) => {
         <button
             onClick={() => props.click()}
         className=" w-full bg-c-red-500 border text-base
-             py-4 text-white font-bold xl:inline-block xl:w-[initial] xl:px-12 "
+             py-4 text-white font-semibold tracking-wider xl:inline-block xl:w-[initial] xl:px-12 "
         >
             {props.text}
         </button>

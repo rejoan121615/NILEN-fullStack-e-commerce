@@ -1,21 +1,20 @@
 import React from "react";
-import SectionTitle from "../../Ui/TitleText/SectionTitle";
 
 const CheckoutProduct = ({ title, type, img, price, count }) => {
     return (
-        <aside className=" grid grid-cols-3 mb-4 xl:grid-cols-4 xl:grid-rows-1
-         first:xl:border-t xl:mb-0 ">
-            <div className=" col-span-3 p-3 border-b xl:col-start-2 xl:col-span-2 xl:border-l ">
+        <aside className=" grid grid-cols-3 mb-4 xl:grid-cols-7 xl:grid-rows-1
+          xl:mb-0  ">
+            <div className=" col-span-3 p-3 border-b xl:col-start-3 xl:col-span-3 xl:border-l ">
                 <h1 className=" font-normal text-c-40 uppercase ">{title}</h1>
                 <p>{type}</p>
             </div>
-            <div className=" col-span-1 border-b xl:col-start-1 xl:col-span-1 xl:row-start-1
+            <div className=" col-span-1 border-b xl:col-start-1 xl:col-span-2 xl:row-start-1
               ">
-                <img className=" aspect-square xl:aspect-[1/0.8] " src={img} alt="product image" />
+                <img className=" aspect-square xl:aspect-[1/0.8] xl:h-full " src={img} alt="product image" />
             </div>
             <div
                 className=" col-span-2 p-3 border-b border-l flex items-center w-full
-             sm:p-10 xl:col-start-4 xl:col-span-1 xl:p-1  "
+             sm:p-10 xl:col-start-6 xl:col-span-2 xl:px-8 "
             >
                 <div className=" w-full">
                     <div className=" flex items-center justify-between ">
