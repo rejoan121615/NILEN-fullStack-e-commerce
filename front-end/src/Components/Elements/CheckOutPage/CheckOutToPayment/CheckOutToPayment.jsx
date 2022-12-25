@@ -7,7 +7,7 @@ import Shipping from "./Shipping";
 import Payment from "./Payment";
 
 const CheckOutToPayment = () => {
-    let [active, setActive] = useState(1);
+    let [active, setActive] = useState(2);
     const [formState, setFormState] = useState([
         {
             title: "contacts",
@@ -24,13 +24,18 @@ const CheckOutToPayment = () => {
             values: "",
             element: <Payment />,
         },
+        {
+            title: "complete",
+            values: "",
+            element: <h1>Thanks for your order</h1>,
+        },
     ]);
 
     const formStateController = (type, value) => {
-      if (type === "back" && active !== 0) {
-          setActive(--active);
-        } else if (type === "forward" && active !==2) {
-          setActive(++active);
+        if (type === "back" && active !== 0) {
+            setActive(--active);
+        } else if (type === "forward" && active !== 2) {
+            setActive(++active);
         }
     };
 
@@ -52,7 +57,7 @@ const CheckOutToPayment = () => {
                         } text-c-25 uppercase flex items-center gap-x-3`}
                     >
                         Contacts
-                    <GiSevenPointedStar className=" text-2xl " />
+                        <GiSevenPointedStar className=" text-2xl " />
                     </li>
                     <li
                         className={`${
@@ -64,7 +69,7 @@ const CheckOutToPayment = () => {
                         } text-c-25 uppercase flex items-center gap-x-3`}
                     >
                         shipping
-                    <GiSevenPointedStar className=" text-2xl " />
+                        <GiSevenPointedStar className=" text-2xl " />
                     </li>
                     <li
                         className={`${

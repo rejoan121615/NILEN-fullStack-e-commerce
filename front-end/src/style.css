@@ -31,9 +31,18 @@
     }
 
     .container {
-        @apply mx-auto px-2 xs:px-0 ;
+        @apply mx-auto px-2 xs:px-0;
     }
     .max-boundry {
         @apply max-w-max-boundry px-3 lg:px-0 mx-auto;
+    }
+    .input {
+        @apply w-full capitalize font-semibold border-b border-c-ash 
+                    placeholder:text-c-ash placeholder:font-normal text-c-ash px-2
+                     py-1 focus-visible:outline-none;
+    }
+    .square-btn--red {
+        @apply w-full bg-c-red-500 border text-base
+             py-4 text-white font-semibold tracking-wider xl:inline-block xl:w-[initial] xl:px-12;
     }
 }
